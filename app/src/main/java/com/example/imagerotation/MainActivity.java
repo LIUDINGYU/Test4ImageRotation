@@ -19,7 +19,9 @@ public class MainActivity extends AppCompatActivity {
                 for (int i = 0; i<12; i++){
                     try{
                         test.setPivotX(test.getWidth()/2);  //设置旋转中心
-                        test.setPivotY(test.getHeight()/2);
+                        test.setPivotY(test.getHeight()*4/13);
+                        test.setTranslationX(i*15);           //设置边平移边旋转
+                        test.setTranslationY(i*15);
                         test.setRotation(i*30);              //设置旋转角度，还有setRotationX() setRotationY()
                         Thread.sleep(1000);
                     }catch (InterruptedException e){
